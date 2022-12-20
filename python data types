@@ -1,0 +1,31 @@
+Basic Python data types:
+a) bool : True or False
+True represet value 1 and False represent 0
+b) Numbers : Integers , Floating point Decimals
+c) Strings
+d) Lists
+e) Sets
+f) Dictionaries
+g) Tuples
+
+Strings: A sequence of alphanumeric characters that is terminated with the NUL character
+
+String immutability:
+a = "Hello"
+b = a 
+a = a + "World"
+# print(a)
+# print(b)
+
+string slicing:
+<  -1-2-3-4-5  -9
+->0123456789
+  HELLOWORLD
+
+  a[1:5] 'ello'
+  a[6:] 'orld'
+  a[6:-1] 'orl'
+  a[:5] 'Hello'
+
+  list , sets and dictionaries:
+
