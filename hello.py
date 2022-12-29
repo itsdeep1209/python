@@ -3,3 +3,15 @@ def hello_world():
 print(hello_world())
 c = 'a' + 'b'
 print (c)
+
+name = input("what's your name")
+# remove whitespace from str
+name = name.strip()
+# capitalize user's name
+name = name.capitalize()
+#capitalize first letter of each word
+name = name.title()
+#remove whitespace from str and capitalize users name
+name = name.strip().title()
+print("hello" , name)
+print(f"hello , {name}")
