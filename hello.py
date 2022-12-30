@@ -15,3 +15,6 @@ name = name.title()
 name = name.strip().title()
 print("hello" , name)
 print(f"hello , {name}")
+# split users name into first name and last name
+# first,last = name.split("")
+print (f"hello, {name}")
