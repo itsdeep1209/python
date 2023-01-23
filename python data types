@@ -17,15 +17,26 @@ a = a + "World"
 # print(a)
 # print(b)
 
-string slicing:
-<  -1-2-3-4-5  -9
-->0123456789
-  HELLOWORLD
+# string slicing:
+# <  -1-2-3-4-5  -9
+# ->0123456789
+#   HELLOWORLD
 
-  a[1:5] 'ello'
-  a[6:] 'orld'
-  a[6:-1] 'orl'
-  a[:5] 'Hello'
+#   a[1:5] 'ello'
+#   a[6:] 'orld'
+#   a[6:-1] 'orl'
+#   a[:5] 'Hello'
 
-  list , sets and dictionaries:
+#   list , sets and dictionaries:
 
+# a = []
+# b = [1, "string" , True , 2.3]
+# list indexing works same as string to get first item in the list access index 0 b[0] to access last item in the list access indes -1 b[-1]
+# List slicing also works the same was as String
+# b[-3:] : item which starts from -3 till ends.
+
+# to add an additional item in the list
+
+# b.append(test)
+# b.insert(2,"test") - will add at index 2
+# len(b) - evaluate the staring length
