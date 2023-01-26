@@ -19,8 +19,10 @@ dragons_ahead()
 
 
 def sum_all(message1, message2, *args):
+    print(message1, message2)
+    print(args)
     total = 0
-    for value in var_args:
+    for value in args:
         total += value
     return total
 
