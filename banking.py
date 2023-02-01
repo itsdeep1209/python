@@ -33,7 +33,8 @@ class SavingsAccount(Account):
             raise Exception("Insufficient balance")
         self.balance -= amount
 
-        
+
+      
 class CurrentAccount(Account):
 
     def withdraw(self , amount):
@@ -45,7 +46,6 @@ class FixedDeposit(Account):
     def withdraw(self, amount):
         raise Exception("Cannot with draw from FD")
 
-       
 guido = CurrentAccount(100101, "Guido" , 1000)
 guido.withdraw(1)
 guido.print_details()
@@ -61,4 +61,31 @@ for acct in bank_list:
         acct.withdraw(1000)
         acct.print_details()
     except Exception as err:
-        print("Error", acct.holders_name, err)
+        print("Error", acct.holders_name, err)      
+
+
+class SavingsAccount(Account):
+    def __init__(self,an,hn,bal,min_bal):
+        # constructor chaining
+        super().__init__(an,hn,bal)
+        self.minimum_balance = min_bal
+
+def withdraw(Self,amount):
+    if self.balance - amount < self.minimum_balance:
+        raise Exception("Insufficient balance")
+    super().withdraw(amount)
+
+class CurrentAccount(Account):
+
+    def __init__(self,an,hn,bal,od_limit):
+      super().__init__(an,hn,bal)
+      self.overdraft_limit = od_limit
+
+    def withdraw(self,amount):
+        if self.balance - amount < -self.overdraft_limit:
+            raise Exception("Overdraft limit reached")
+        #self.balance -= amount
+        super().withdraw(amount)
+
+
+
