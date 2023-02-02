@@ -5,12 +5,19 @@ class Account:
         self.holders_name = hn
         self.balance = bal
 
-    def print_details(self):
+    def print_details(self,last=None):
         print("Account number:", self.account_number)
         print("Holders name:", self.holders_name)
         print("Balance:", self.balance)
         # print("Acoount=", self.account_number, "Holders Name=", self.holders_name , "Balance=", self.balance)
         # print("Account=%5d, Holder Name=%-20s, Balance=%10.2f"%(self.account_number,self.holders_name,self.balance))
+        if last:
+            last_transactions = self.transactions[::last]
+            for index,tran in enumerate(last_transactions):
+                print(f"{index}{tran[0]:10.2f}{tran[1]")
+        else:
+            for index,tran in enumerate(last_transactions):
+                print(f"{index}{tran[0]:10.2f}{tran[1]")
 
     def deposit(self, amount):
         self.balance += amount
