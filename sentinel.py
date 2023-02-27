@@ -35,6 +35,14 @@ class SentinelList:
         self.head.next.prev = spot
         self.head.next = spot
 
+    def search_node(self, value):
+        current_node = self.head.next
+
+        while current_node is not self.tail:
+            if current_node.value == value:
+                return current_node
+            current_node = current_node.next
+        return None
 
     def print_forward(self):
         current_node = self.head.next
